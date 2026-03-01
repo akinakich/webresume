@@ -160,6 +160,65 @@
             line-height: normal;
         }
 
+        .skills h2 {
+            margin: 0;
+            color: #000;
+            font-family: Calibri, sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .skills {
+            position: absolute;
+            top: 740px;
+            left: 59px;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+
+        .skills-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #000;
+            font-family: Calibri;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .skill-dot {
+            display: flex;
+            margin-left: 10px;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #EFF8FF;
+            border-radius: 50%;
+        }
+
+        .dot-active {
+            background: #A5D9FF;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
     </style>
 </head>
 <body>
@@ -200,6 +259,57 @@
                     <div class="rectangle-item">2016-2025</div>
                     <span class="text-near-rectangle">Loftschool Web Development Course</span>
                 </div>
+            </section>
+
+            <section class="skills">
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li>
+                        <span class="skill-text">HTML5</span>
+
+                        <div class="skill-dot">
+                            <span class="dot-active"></span>
+                            <span class="dot-active"></span>
+                            <span class="dot-active"></span>
+                            <span class="dot-active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="skill-text">CSS3</span>
+
+                        <div class="skill-dot">
+                            <span class="dot-active"></span>
+                            <span class="dot-active"></span>
+                            <span class="dot-active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="skill-text">JS basic</span>
+
+                        <div class="skill-dot">
+                            <span class="dot-active"></span>
+                            <span class="dot-active"></span>
+                            <span class="dot-active"></span>
+                            <span class="dot-active"></span>
+                            <span class="dot-active"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="skill-text">PUG</span>
+
+                        <div class="skill-dot">
+                            <span class="dot-active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </li>
+                   
+                </ul>
             </section>
                 
             
