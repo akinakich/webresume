@@ -9,6 +9,7 @@
 
         body {
             margin: 0;      /*margin 0, чтобы убрать полосу сверху над контейнерами */
+            caret-color: transparent;
         }
 
          .containers {
@@ -367,6 +368,12 @@
             border-radius: 5px;
             border: 1px solid rgba(2, 6, 238, 0.33);
             background: #A5D9FF;
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
 
         }
 
@@ -474,6 +481,12 @@
             border-radius: 5px;
             border: 1px solid rgba(2, 6, 238, 0.33);
             background: #A5D9FF;
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
         }
 
         .work-experience-second p {
@@ -492,9 +505,65 @@
             height: 100px;
         }
 
+        .hobbies h1 {
+            margin: 0;
+            position: absolute;
+            top: 960px;
+            left: 66px;
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;       
+        }
 
+        .hobbies-list-one {
+            margin: 0;
+            position: absolute;
+            top: 1003px;
+            left: 66px;
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+        }
 
-        
+        .hobbies-list-two {
+            margin: 0;
+            position: absolute;
+            top: 1003px;
+            left: 313px;
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal; 
+        }
+
+        .line {
+            margin: 0;
+            position: absolute;
+            background: #A5D9FF;
+            width: 1px;
+            height: 28px;
+            top: 1015px;
+            left: 258px;
+
+        }
+
+        .elipse-on-hobbies {
+            margin: 0;
+            position: absolute;
+            top: 960px;
+            left: -132px;
+           
+
+        }
+
     </style>
 </head>
 <body>
@@ -612,7 +681,7 @@
             </section>
 
             <section class="work-experience">
-                <h1>Experience</h1>
+                <h1>Work Experience</h1>
                 <h2>Web-developer</h2>
                 <div class="work-rectangle-item">ATM</div>
                 <span class="work-text">
@@ -637,7 +706,6 @@
                             pages&nbsp;—&nbsp; <span style="color: #0093FF;">minilanding.lapkinlab.ru</span>
                         </span>
                     </div>
-                
                 </div>
 
                 <div class="work-experience-second">
@@ -652,11 +720,31 @@
                         out on manual customization of sites according to the design layout,<br>
                         namely: additional css-styles, adaptive version.</p>
                 </div>
-
-
-
-            
-                
+            </section>
+            <section class="hobbies">
+                <h1>Hobbies</h1>
+                <img src="elipse.svg" alt="elipse-on-hobbies-section" class="elipse-on-hobbies">
+                <div class="hobbies-list-one">
+                    <div class="hobbies-item">
+                        <span class="dot-in-work"></span>
+                        <span>Reading books</span>
+                    </div>
+                    <div class="hobbies-item">
+                        <span class="dot-in-work"></span>
+                        <span>Ornitology</span>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="hobbies-list-two">
+                    <div class="hobbies-item">
+                        <span class="dot-in-work"></span>
+                        <span>Fire Show</span>
+                    </div>
+                    <div class="hobbies-item">
+                        <span class="dot-in-work"></span>
+                        <span>Nature photography</span>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
