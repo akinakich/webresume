@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+
+    <style>
+
+        body {
+            margin: 0;      /*margin 0, чтобы убрать полосу сверху над контейнерами */
+        }
+
+         .containers {
+            display: flex;
+            position: relative;
+        }
+        
+        .left-container {
+            overflow: hidden;
+            position: relative;
+            margin-left: 404px;
+            width: 400px;
+            height: 1080px;
+            background: #F6FFFF;
+        }
+
+        .right-container {
+            width: 712px;
+            height: 1080px;
+            background: #333;
+        }
+        
+        .avatar {
+            z-index: 2;
+            position: relative;
+            margin-left: 107px;
+            margin-top: 58px;
+        }
+
+        .circle-under-avatar {
+            z-index: 1;
+            position: absolute;
+            top: 47px;
+            left: 96px;
+            background: #85B2D6;
+            width: 208px;
+            height: 208px;
+            border-radius: 50%;
+            opacity: 0.2;
+
+        }
+
+        .circle-on-avatar {
+            z-index: 3;
+            position: absolute; 
+            top: 47px;
+            left: 233px;
+            background: #53B3FF;
+            width: 71px;
+            height: 71px;
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+
+        .circle-left-top {
+            z-index: 0;
+            position: absolute;
+            top: -49px;
+            left: -57px;
+            background: #53B3FF80;
+            width: 257px;
+            height: 257px;
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="containers">       <!-- Реализовал один контейнер, в который поместил две части страницы, левый блок и правый блок -->
+        <div class="left-container">
+            <img src="ava.svg" alt="avatar" class="avatar">
+            <div class="circle-under-avatar"></div>
+            <div class="circle-on-avatar"></div>
+            <div class="circle-left-top"></div>
+        </div>
+        <div class="right-container"></div>
+    </div>
+</body>
+</html>
