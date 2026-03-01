@@ -26,6 +26,8 @@
         }
 
         .right-container {
+            overflow: hidden;
+            position: relative;
             width: 712px;
             height: 1080px;
             background: #333;
@@ -257,6 +259,44 @@
             height: 6px;
             border-radius: 50%;
         }
+
+        .right-container h1 {
+            margin: 0;
+            position: absolute;
+            top: 116px;
+            left: 66px;
+
+            color: #000;
+        font-family: "SF Pro";
+        font-size: 59px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        }
+
+        .circle-under-name {
+            position: absolute;
+            background: #A5D9FF;
+            border-radius: 50%;
+            width: 68px;
+            height: 68px;
+            opacity: 0.2;
+            top: 116px;
+            left: 52px;
+        }
+        .right-container h3 {
+            margin: 0;
+            position: absolute;
+            top: 186px;
+            left: 66px;
+
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
     </style>
 </head>
 <body>
@@ -359,7 +399,11 @@
                 
             
         </div>
-        <div class="right-container"></div>
+        <div class="right-container">
+            <h1>Durov Pavel</h1>
+            <div class="circle-under-name"></div>
+            <h3>Web-developer</h3>
+        </div>
     </div>
 </body>
 </html>
