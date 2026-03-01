@@ -30,7 +30,7 @@
             position: relative;
             width: 712px;
             height: 1080px;
-            background: #333;
+            background: #fff;
         }
         
         .avatar {
@@ -297,6 +297,204 @@
             font-weight: 400;
             line-height: normal;
         }
+
+        .about-me h2 {
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;
+            margin: 0;
+            position: absolute;
+            top: 308px;
+            left: 66px;
+        }
+        .about-me p {
+            margin: 0;
+            position: absolute;
+            top: 351px;
+            left: 66px;
+
+            color: #000;
+            font-family: 'Calibri';
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+            width: 580px;
+            height: 100px;
+
+        }
+
+        .work-experience h1 {
+            margin: 0;
+            position: absolute;
+            top: 469px;
+            left: 66px;
+
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;
+        }
+
+        .work-experience h2 {
+            margin: 0;
+            position: absolute;
+            top: 512px;
+            left: 66px;
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;
+        }
+
+        .work-rectangle-item {
+            margin: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 548px;
+            left: 66px;
+            width: 48px;
+            height: 21px;
+            border-radius: 5px;
+            border: 1px solid rgba(2, 6, 238, 0.33);
+            background: #A5D9FF;
+
+        }
+
+        .work-text {
+            position: absolute;
+            top: 550px;
+            left: 119px;
+
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+        }
+
+        .work-experience p {
+            margin: 0;
+            position: absolute;
+            top: 589px;
+            left: 66px;
+
+            color: #000;
+            font-family: 'Calibri';
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+            width: 580px;
+            height: 100px;
+        }
+
+        .work-experience-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            position: static;
+            gap: 6px;
+            top: 678px;
+            left: 80px;
+
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+
+        }
+
+        .dot-in-work {
+            display: inline-block;
+            background: #A5D9FF;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .work-experience-list {
+        position: absolute;
+        top: 678px;
+        left: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        }
+
+        .work-experience-second h2 {
+            margin: 0;
+            position: absolute;
+            top: 796px;   /* подбери число, если надо ниже/выше */
+            left: 66px;
+
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;
+        }
+
+        .web-text {
+            position: absolute;
+            top: 823px;
+            left: 119px;
+
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+        }
+
+        .web-rectangle-item {
+            margin: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 822px;
+            left: 66px;
+            width: 48px;
+            height: 21px;
+            border-radius: 5px;
+            border: 1px solid rgba(2, 6, 238, 0.33);
+            background: #A5D9FF;
+        }
+
+        .work-experience-second p {
+            margin: 0;
+            position: absolute;
+            top: 864px;
+            left: 66px;
+
+            color: #000;
+            font-family: 'Calibri';
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+            width: 580px;
+            height: 100px;
+        }
+
+
+
+        
     </style>
 </head>
 <body>
@@ -400,9 +598,66 @@
             
         </div>
         <div class="right-container">
+
             <h1>Durov Pavel</h1>
             <div class="circle-under-name"></div>
             <h3>Web-developer</h3>
+
+            <section class="about-me">
+                <h2>About me</h2>
+                <p>Hi! I'm a junior frontend developer. I want to upgrade my skills. Now I<br>
+                    work in not very big company. My job responsibilites include ordinary and<br> 
+                    not the most interesting task. But in a future i'd like to work in strong<br>
+                     team width the extraordinary prodjects. I'd like do beautiful interactive cites.</p>
+            </section>
+
+            <section class="work-experience">
+                <h1>Experience</h1>
+                <h2>Web-developer</h2>
+                <div class="work-rectangle-item">ATM</div>
+                <span class="work-text">
+                    RocketProfit Company 
+                    <span style="color: #0093FF;">rocketprofit.com</span>
+                </span>
+                <p>Remote work on schedule. Creation of landing pages<br>
+                    and transit pages according to a specific technical<br>
+                    specification, making edits to existing projects.<br>
+                    Examples of my works:</p>
+
+                <div class="work-experience-list">
+                    <div class="work-experience-item">
+                        <span class="dot-in-work"></span>
+                        <span>Creating a page for the Lapkin Lab website using the AmoCRM<br>
+                            system&nbsp;—&nbsp; <span style="color: #0093FF;">msk.lapkinlab.ru/amocrm</span>
+                        </span>
+                    </div>
+                    <div class="work-experience-item">
+                        <span class="dot-in-work"></span>
+                        <span>Creating a layout for a promo page to promote mini-landing<br>
+                            pages&nbsp;—&nbsp; <span style="color: #0093FF;">minilanding.lapkinlab.ru</span>
+                        </span>
+                    </div>
+                
+                </div>
+
+                <div class="work-experience-second">
+                    <h2>WEB-developer</h2>
+                    <div class="web-rectangle-item">19-20</div>
+                    <span class="web-text">
+                    Line Landing 
+                    <span style="color: #0093FF;">line-landing.by</span>
+                    </span>
+                    <p>Project work. Website development on WordPress based on the<br>
+                        Elementor constructor. In addition, a large amount of work was carried<br>
+                        out on manual customization of sites according to the design layout,<br>
+                        namely: additional css-styles, adaptive version.</p>
+                </div>
+
+
+
+            
+                
+            </section>
         </div>
     </div>
 </body>
