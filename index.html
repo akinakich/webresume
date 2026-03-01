@@ -17,7 +17,7 @@
         }
         
         .left-container {
-            overflow: hidden;
+            overflow: hidden;   /* прячет все, что находится за левым контейром (нужно для круга в левом углу) */
             position: relative;
             margin-left: 404px;
             width: 400px;
@@ -75,6 +75,45 @@
             opacity: 0.2;
         }
 
+        .contacts {
+            position: absolute;
+            top: 310px;
+            left: 59px;
+        }
+
+        .contacts h2 {
+            margin: 0;
+            color: #000;
+            font-family: Calibri, sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        
+        .contact-item {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+        }
+
+        .contact-item img {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .contacts-item-text {
+            color: #373737;
+            font-family: Calibri, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
     </style>
 </head>
 <body>
@@ -84,6 +123,22 @@
             <div class="circle-under-avatar"></div>
             <div class="circle-on-avatar"></div>
             <div class="circle-left-top"></div>
+            <section class="contacts">
+                <h2>Contacts</h2>
+                <div class="contact-item">
+                    <img src="github.svg" alt="github">
+                    <span class="contacts-item-text">github.com/monk</span>
+                </div>
+                <div class="contact-item">
+                    <img src="telegram.svg" alt="telegram">
+                    <span class="contacts-item-text">t.me/monk</span>
+                </div>
+                <div class="contact-item">
+                    <img src="email.svg" alt="email">
+                    <span class="contacts-item-text">monk@gmail.com</span>
+                </div>
+                
+            </section>
         </div>
         <div class="right-container"></div>
     </div>
