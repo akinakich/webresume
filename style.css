@@ -1,0 +1,557 @@
+<style>
+
+        body {
+            margin: 0;      /*margin 0, чтобы убрать полосу сверху над контейнерами */
+            caret-color: transparent;
+        }
+
+         .containers {
+            display: flex;
+            position: relative;
+        }
+        
+        .left-container {
+            overflow: hidden;   /* прячет все, что находится за левым контейром (нужно для круга в левом углу) */
+            position: relative;
+            margin-left: 404px;
+            width: 400px;
+            height: 1080px;
+            background: #F6FFFF;
+        }
+
+        .right-container {
+            overflow: hidden;
+            position: relative;
+            width: 712px;
+            height: 1080px;
+            background: #fff;
+        }
+        
+        .avatar {
+            z-index: 2;
+            position: relative;
+            margin-left: 107px;
+            margin-top: 58px;
+        }
+
+        .circle-under-avatar {
+            z-index: 1;
+            position: absolute;
+            top: 47px;
+            left: 96px;
+            background: #85B2D6;
+            width: 208px;
+            height: 208px;
+            border-radius: 50%;
+            opacity: 0.2;
+
+        }
+
+        .circle-on-avatar {
+            z-index: 3;
+            position: absolute; 
+            top: 47px;
+            left: 233px;
+            background: #53B3FF;
+            width: 71px;
+            height: 71px;
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+
+        .circle-left-top {
+            z-index: 0;
+            position: absolute;
+            top: -49px;
+            left: -57px;
+            background: #53B3FF80;
+            width: 257px;
+            height: 257px;
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+
+        .contacts {
+            position: absolute;
+            top: 310px;
+            left: 60px;
+        }
+
+        .contacts h2 {
+            margin: 0;
+            color: #000;
+            font-family: Calibri, sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        
+        .contact-item {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+        }
+
+        .contact-item img {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .contacts-item-text {
+            color: #373737;
+            font-family: Calibri, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        .education h2 {
+            margin: 0;
+            color: #000;
+            font-family: Calibri, sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .education {
+            position: absolute;
+            top: 480px;
+            left: 60px;
+        }
+
+        .rectangle-item {
+            display: flex;
+            margin-top: 16px;
+            align-items: center;
+            justify-content: center;
+            width: 85px;
+            height: 21px;
+            background: #A5D9FF;
+            border: 1px solid rgba(2, 6, 238, 0.33);
+            border-radius: 5px;
+
+            color: #000;
+            font-family: Calibri, sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .text-near-rectangle {
+            display: flex;
+            margin-top: 11px;
+            color: #000;
+            font-family: Calibri, sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .skills h2 {
+            margin: 0;
+            color: #000;
+            font-family: Calibri, sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .skills {
+            position: absolute;
+            top: 740px;
+            left: 60px;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+
+        .skills-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #000;
+            font-family: Calibri, sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .skill-dot {
+            display: flex;
+            margin-left: 10px;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #EFF8FF;
+            border-radius: 50%;
+        }
+
+        .dot-active {
+            background: #A5D9FF;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .foreign-languages h2 {
+            margin: 0;
+            position: absolute;
+            top: 897px;
+            left: 60px;
+
+            color: #000;
+            font-family: Calibri, sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .foreign-languages-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            gap: 6px;
+            top: 930px;
+            left: 60px;
+
+            color: #000;
+        font-family: Calibri, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        }
+
+        .dot-in-foreign {
+            display: inline-block;
+            background: #A5D9FF;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .right-container h1 {
+            margin: 0;
+            position: absolute;
+            top: 116px;
+            left: 66px;
+
+            color: #000;
+        font-family: "SF Pro";
+        font-size: 59px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        }
+
+        .circle-under-name {
+            position: absolute;
+            background: #A5D9FF;
+            border-radius: 50%;
+            width: 68px;
+            height: 68px;
+            opacity: 0.2;
+            top: 116px;
+            left: 52px;
+        }
+        .right-container h3 {
+            margin: 0;
+            position: absolute;
+            top: 186px;
+            left: 66px;
+
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .about-me h2 {
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;
+            margin: 0;
+            position: absolute;
+            top: 308px;
+            left: 66px;
+        }
+        .about-me p {
+            margin: 0;
+            position: absolute;
+            top: 351px;
+            left: 66px;
+
+            color: #000;
+            font-family: 'Calibri';
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+            width: 580px;
+            height: 100px;
+
+        }
+
+        .work-experience h1 {
+            margin: 0;
+            position: absolute;
+            top: 469px;
+            left: 66px;
+
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;
+        }
+
+        .work-experience h2 {
+            margin: 0;
+            position: absolute;
+            top: 512px;
+            left: 66px;
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;
+        }
+
+        .work-rectangle-item {
+            margin: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 548px;
+            left: 66px;
+            width: 48px;
+            height: 21px;
+            border-radius: 5px;
+            border: 1px solid rgba(2, 6, 238, 0.33);
+            background: #A5D9FF;
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+
+        }
+
+        .work-text {
+            position: absolute;
+            top: 550px;
+            left: 119px;
+
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+        }
+
+        .work-experience p {
+            margin: 0;
+            position: absolute;
+            top: 589px;
+            left: 66px;
+
+            color: #000;
+            font-family: 'Calibri';
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+            width: 580px;
+            height: 100px;
+        }
+
+        .work-experience-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+
+        }
+
+        .dot-in-work {
+            flex: 0 0 auto;
+            width: 6px;
+            height: 6px;
+            background: #A5D9FF;
+            border-radius: 50%;
+            margin-top: 8px; 
+}
+
+        .work-experience-list {
+        position: absolute;
+        top: 678px;
+        left: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        }
+
+        .work-experience-second h2 {
+            margin: 0;
+            position: absolute;
+            top: 796px;   /* подбери число, если надо ниже/выше */
+            left: 66px;
+
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;
+        }
+
+        .web-text {
+            position: absolute;
+            top: 823px;
+            left: 119px;
+
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+        }
+
+        .web-rectangle-item {
+            margin: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 822px;
+            left: 66px;
+            width: 48px;
+            height: 21px;
+            border-radius: 5px;
+            border: 1px solid rgba(2, 6, 238, 0.33);
+            background: #A5D9FF;
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+        }
+
+        .work-experience-second p {
+            margin: 0;
+            position: absolute;
+            top: 864px;
+            left: 66px;
+
+            color: #000;
+            font-family: 'Calibri';
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+            width: 580px;
+            height: 100px;
+        }
+
+        .hobbies h1 {
+            margin: 0;
+            position: absolute;
+            top: 960px;
+            left: 66px;
+            color: #000;
+            font-family: "SF Pro";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;       
+        }
+
+        .hobbies-list-one {
+            margin: 0;
+            position: absolute;
+            top: 1003px;
+            left: 66px;
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal;
+        }
+
+        .hobbies-list-two {
+            margin: 0;
+            position: absolute;
+            top: 1003px;
+            left: 313px;
+            color: #000;
+            font-family: "Calibri", sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 274;
+            line-height: normal; 
+        }
+
+        .line {
+            margin: 0;
+            position: absolute;
+            background: #A5D9FF;
+            width: 1px;
+            height: 28px;
+            top: 1015px;
+            left: 258px;
+
+        }
+
+        .elipse-on-hobbies {
+            margin: 0;
+            position: absolute;
+            top: 960px;
+            left: -132px;
+           
+
+        }
+
+    </style>
